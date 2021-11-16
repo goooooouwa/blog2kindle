@@ -29,7 +29,7 @@ EMAIL_PASSWD = os.getenv("EMAIL_PASSWORD")
 EMAIL_FROM = os.getenv("EMAIL_FROM")
 KINDLE_EMAIL = os.getenv("KINDLE_EMAIL")
 PANDOC = os.getenv("PANDOC_PATH", "/usr/bin/pandoc")
-PERIOD = int(os.getenv("UPDATE_PERIOD", 12))  # hours between RSS pulls
+PERIOD = int(os.getenv("UPDATE_PERIOD", 12000000000))  # hours between RSS pulls
 TIMEZONE = os.getenv("TIMEZONE", "UTC")
 
 CONFIG_PATH = '/config'
@@ -63,7 +63,7 @@ def get_start(fname):
     Get the starting time to read posts since. This is currently saved as 
     the time of last RSS pulls.
     """
-    return pytz.utc.localize(datetime.now() - timedelta(hours = PERIOD))
+    return pytz.utc.localize(datetime(1970, 1, 1))
 
 
 def get_posts_list(feed_list, START):
@@ -157,7 +157,7 @@ def send_mail(send_from, send_to, subject, text, files):
 
 
 def convert_to_mobi(input_file, output_file):
-    cmd = ['ebook-convert', input_file, output_file]
+    cmd = ['/Applications/calibre.app/Contents/MacOS/ebook-convert', input_file, output_file]
     process = subprocess.Popen(cmd)
     process.wait()
 
