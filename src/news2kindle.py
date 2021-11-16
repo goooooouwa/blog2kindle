@@ -20,7 +20,7 @@ from datetime import datetime, timedelta
 import os
 from FeedparserThread import FeedparserThread
 
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.DEBUG)
 
 EMAIL_SMTP = os.getenv("EMAIL_SMTP")
 EMAIL_SMTP_PORT = int(os.getenv("EMAIL_SMTP_PORT"))
@@ -32,7 +32,7 @@ PANDOC = os.getenv("PANDOC_PATH", "/usr/bin/pandoc")
 PERIOD = int(os.getenv("UPDATE_PERIOD", 12000000000))  # hours between RSS pulls
 TIMEZONE = os.getenv("TIMEZONE", "UTC")
 
-CONFIG_PATH = '/config'
+CONFIG_PATH = './config'
 FEED_FILE = os.path.join(CONFIG_PATH, 'feeds.txt')
 COVER_FILE = os.path.join(CONFIG_PATH, 'cover.png')
 
@@ -157,7 +157,7 @@ def send_mail(send_from, send_to, subject, text, files):
 
 
 def convert_to_mobi(input_file, output_file):
-    cmd = ['/Applications/calibre.app/Contents/MacOS/ebook-convert', input_file, output_file]
+    cmd = ['ebook-convert', input_file, output_file]
     process = subprocess.Popen(cmd)
     process.wait()
 
