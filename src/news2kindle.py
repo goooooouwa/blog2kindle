@@ -191,7 +191,7 @@ def do_one_round():
                               to='epub3',
                               format="html",
                               outputfile=epubFile,
-                              extra_args=["--standalone",
+                              extra_args=["--standalone","--log=/home/greg/projects/news2kindle/pandoc.log","--verbose"
                                           ])
         convert_to_mobi(epubFile, mobiFile)
 

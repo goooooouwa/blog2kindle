@@ -1,1 +1,1 @@
-https://raw.githubusercontent.com/goooooouwa/htmlparser/master/example-rss.xml
+https://raw.githubusercontent.com/goooooouwa/htmlparser/master/example-rss-1.xml
