@@ -18,8 +18,10 @@ import threading
 import subprocess
 from datetime import datetime, timedelta
 import os
+import locale
 from FeedparserThread import FeedparserThread
 
+locale.setlocale(locale.LC_ALL, "en_US.utf8")
 logging.basicConfig(level=logging.DEBUG)
 
 EMAIL_SMTP = os.getenv("EMAIL_SMTP")
