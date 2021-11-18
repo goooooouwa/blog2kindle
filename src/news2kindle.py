@@ -35,7 +35,7 @@ PERIOD = int(os.getenv("UPDATE_PERIOD", 12000000000))  # hours between RSS pulls
 TIMEZONE = os.getenv("TIMEZONE", "UTC")
 
 CONFIG_PATH = './config'
-FEED_FILE = os.path.join(CONFIG_PATH, sys.argv[1])
+FEED_FILE = os.path.join(CONFIG_PATH, 'slice-' + sys.argv[1] + '.txt')
 COVER_FILE = os.path.join(CONFIG_PATH, 'cover.png')
 
 
@@ -115,7 +115,7 @@ html_head = u"""<html>
   <meta name="apple-mobile-web-app-capable" content="yes" />
 <style>
 </style>
-<title>Coding Horror</title>
+<title>Coding Horror - {slice}</title>
 </head>
 <body>
 
@@ -179,14 +179,14 @@ def do_one_round():
     if posts:
         logging.info("Compiling newspaper")
 
-        result = html_head.format(**nicestart(start)) + \
+        result = html_head.format(slice=sys.argv[1]) + \
             u"\n".join([html_perpost.format(**nicepost(post))
                         for post in posts]) + html_tail
 
         logging.info("Creating epub")
 
-        epubFile = 'dailynews.epub'
-        mobiFile = 'dailynews.mobi'
+        epubFile = sys.argv[1] + '.epub'
+        mobiFile = sys.argv[1] + '.mobi'
 
         os.environ['PYPANDOC_PANDOC'] = PANDOC
         pypandoc.convert_text(result,
