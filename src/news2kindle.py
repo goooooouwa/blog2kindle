@@ -35,7 +35,7 @@ PERIOD = int(os.getenv("UPDATE_PERIOD", 12000000000))  # hours between RSS pulls
 TIMEZONE = os.getenv("TIMEZONE", "UTC")
 
 CONFIG_PATH = './config'
-FEED_FILE = os.path.join(CONFIG_PATH, 'feeds.txt')
+FEED_FILE = os.path.join(CONFIG_PATH, sys.argv[1])
 COVER_FILE = os.path.join(CONFIG_PATH, 'cover.png')
 
 
