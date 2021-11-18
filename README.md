@@ -40,7 +40,7 @@ Load env
 ```
 for i in {0..4}
 do
-echo slice-$i.txt
-python3 src/news2kindle.py slice-$i.txt
+echo "https://raw.githubusercontent.com/goooooouwa/htmlparser/master/out/slice-$i.xml" > config/slice-$i.txt
+python3 src/news2kindle.py $i
 done
 ```
