@@ -26,3 +26,7 @@ docker run --env-file <path/to/env/file> news2kindle
 ```
 
 where the `.env` file contains all the environment variables defined in [news2kindle.py](src/news2kindle.py).
+
+## Load env
+
+`export $(cat .env | xargs)`
