@@ -113,7 +113,7 @@ html_head = u"""<html>
   <meta name="apple-mobile-web-app-capable" content="yes" />
 <style>
 </style>
-<title>News since {nicedate} {nicetime}</title>
+<title>Coding Horror</title>
 </head>
 <body>
 
@@ -191,7 +191,8 @@ def do_one_round():
                               to='epub3',
                               format="html",
                               outputfile=epubFile,
-                              extra_args=["--standalone"
+                              extra_args=["--standalone",
+                                          f"--epub-cover-image={COVER_FILE}",
                                           ])
         convert_to_mobi(epubFile, mobiFile)
 
