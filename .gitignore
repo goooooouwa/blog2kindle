@@ -3,3 +3,5 @@ docker-compose.yaml
 __pycache__
 .DS_Store
 *.log
+dailynews.mobi
+dailynews.epub
