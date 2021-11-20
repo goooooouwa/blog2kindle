@@ -35,7 +35,7 @@ PERIOD = int(os.getenv("UPDATE_PERIOD", 12000000000))  # hours between RSS pulls
 TIMEZONE = os.getenv("TIMEZONE", "UTC")
 
 CONFIG_PATH = './config'
-FEED_FILE = os.path.join(CONFIG_PATH, 'slice-' + sys.argv[1] + '.txt')
+FEED_FILE = os.path.join(CONFIG_PATH, 'slice-' + sys.argv[2] + '.txt')
 COVER_FILE = os.path.join(CONFIG_PATH, 'cover.png')
 
 
@@ -185,8 +185,8 @@ def do_one_round():
 
         logging.info("Creating epub")
 
-        epubFile = sys.argv[1] + '.epub'
-        mobiFile = sys.argv[1] + '.mobi'
+        epubFile = sys.argv[1] + '-' + sys.argv[2] + '.epub'
+        mobiFile = sys.argv[1] + '-' + sys.argv[2] + '.mobi'
 
         os.environ['PYPANDOC_PANDOC'] = PANDOC
         pypandoc.convert_text(result,
