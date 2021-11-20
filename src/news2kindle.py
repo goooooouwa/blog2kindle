@@ -115,7 +115,7 @@ html_head = u"""<html>
   <meta name="apple-mobile-web-app-capable" content="yes" />
 <style>
 </style>
-<title>Coding Horror - {slice}</title>
+<title>{blog} - {slice}</title>
 </head>
 <body>
 
@@ -179,7 +179,7 @@ def do_one_round():
     if posts:
         logging.info("Compiling newspaper")
 
-        result = html_head.format(slice=sys.argv[1]) + \
+        result = html_head.format(blog=sys.argv[1], slice=sys.argv[2]) + \
             u"\n".join([html_perpost.format(**nicepost(post))
                         for post in posts]) + html_tail
 
