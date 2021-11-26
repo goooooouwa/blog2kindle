@@ -1,6 +1,6 @@
 # Send your blog RSS feed to your Kindle
 
-`blog2kindle` is a little Python script that, combined with [htmlparser](https://github.com/goooooouwa/htmlparser), can turn the RSS feed of a blog into an ebook to read on your ebook reader, such as Kindle, Apple Books. See how it works here: https://github.com/goooooouwa/htmlparser/blob/master/README.md.
+blog2kindle is a little Python script that, combined with [htmlparser](https://github.com/goooooouwa/htmlparser), can turn the RSS feed of a blog into an ebook to read on your ebook reader, such as Kindle, Apple Books. See how it works here: https://github.com/goooooouwa/htmlparser/blob/master/README.md.
 
 It's based on code from [news2kindle](https://github.com/goooooouwa/news2kindle) which will read a list of blog RSS feeds, package them as a MOBI file, and then send it to your kindle via kindle mail address and Amazon's whispersync. 
 
