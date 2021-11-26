@@ -12,7 +12,10 @@ It's based on code from [news2kindle](https://github.com/goooooouwa/news2kindle)
 
 ### 2. Generate ebook from blog RSS feed in feeds.txt
 
-`python3 ./src/news2kindle.py "blog title"`
+```
+# RSS feed is in config/feeds.txt
+python3 ./src/news2kindle.py "blog title"
+```
 
 If the blog RSS feed is split into multiple feeds, you can run:
 
