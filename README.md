@@ -20,7 +20,7 @@ It's based on code from [news2kindle](https://github.com/goooooouwa/news2kindle)
 
 ```
 # RSS feed is in config/feeds.txt
-python3 ./src/news2kindle.py "blog title"  # which reads a list of blog RSS feeds, package them as a MOBI file, and then send it to your kindle via kindle mail address and Amazon's whispersync.
+python3 ./src/news2kindle.py "blog title" 0 # which reads a list of blog RSS feeds, package them as a MOBI file, and then send it to your kindle via kindle mail address and Amazon's whispersync.
 ```
 
 To combine multiple RSS feeds into one ebook, you can run:
