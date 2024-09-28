@@ -6,9 +6,9 @@ It's based on code from [news2kindle](https://github.com/goooooouwa/news2kindle)
 
 ## Demo: ebook for blog [Coding Horror](https://blog.codinghorror.com/)
 
-![Screen Shot 2021-11-25 at 6 48 48 PM](https://user-images.githubusercontent.com/1495607/143427976-0fa33f81-93e6-4271-8562-53cce35bd1e1.png)
-
 ![Screen Shot 2021-11-25 at 6 49 02 PM](https://user-images.githubusercontent.com/1495607/143427994-5eea1a37-2b73-4c71-9858-eed10ea09abd.png)
+
+![Screen Shot 2021-11-25 at 6 48 48 PM](https://user-images.githubusercontent.com/1495607/143427976-0fa33f81-93e6-4271-8562-53cce35bd1e1.png)
 
 ## How to use
 
