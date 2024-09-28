@@ -25,7 +25,7 @@ If the blog RSS feed is split into multiple feeds, you can run:
 for i in {0..4}
 do
 echo "https://raw.githubusercontent.com/goooooouwa/out/master/out/slice-$i.xml" > config/slice-$i.txt
-python3 src/news2kindle.py "blog title" $i
+python3 ./src/news2kindle.py "blog title" $i
 done
 ```
 
