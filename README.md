@@ -16,11 +16,11 @@ It's based on code from [news2kindle](https://github.com/goooooouwa/news2kindle)
 
 Examples:
 
-### 1. Load env
+### 1. Setup environment variables from `.env` file
 
 `export $(cat .env | xargs)`
 
-### 2. Generate ebook from blog RSS feed in feeds.txt
+### 2. Generate ebook from RSS feed and send it to Kindle
 
 ```
 # RSS feed is in config/feeds.txt
@@ -36,6 +36,8 @@ echo "https://raw.githubusercontent.com/goooooouwa/out/master/out/slice-$i.xml" 
 python3 ./src/news2kindle.py "blog title" $i
 done
 ```
+
+Now you will have your favourite blog sent to your Kindle, waiting for you to pick up.
 
 ## How do I get RSS feeds for my favourite websites if it doesn't provide one?
 
