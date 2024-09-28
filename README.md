@@ -20,14 +20,15 @@ Examples:
 
 `export $(cat .env | xargs)`
 
-### 2. Generate ebook from RSS feed and send it to Kindle
+### 2. Save public URLs of RSS feeds into config/slice-[0-9].txt
+
+### 3. Generate ebook from RSS feed and send it to Kindle
 
 ```
-# RSS feed is in config/feeds.txt
-python3 ./src/news2kindle.py "blog title" 0 # which reads a list of blog RSS feeds, package them as a MOBI file, and then send it to your kindle via kindle mail address and Amazon's whispersync.
+python3 ./src/news2kindle.py "blog title" 0 # which fetches the content of each RSS feeds linked in config/slice-[0-9].txt, package them as a MOBI file, and then send it to your kindle via kindle mail address and Amazon's whispersync.
 ```
 
-To combine multiple RSS feeds into one ebook, you can run:
+To generate multiple books in batch, you can run:
 
 ```
 for i in {0..4}
