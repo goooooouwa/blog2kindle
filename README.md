@@ -35,4 +35,4 @@ done
 
 ## How do I get RSS feeds for my favourite websites if it doesn't provide one?
 
-You can use [blog_downloader](https://github.com/goooooouwa/blog_downloader) to generate RSS feeds from any website. See how it works [here](https://github.com/goooooouwa/blog_downloader/blob/master/README.md). 
+You can use [blog_downloader](https://github.com/goooooouwa/blog_downloader) to crawl any website and generate RSS feeds from them. See how it works [here](https://github.com/goooooouwa/blog_downloader/blob/master/README.md). 
