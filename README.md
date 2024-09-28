@@ -28,3 +28,8 @@ echo "https://raw.githubusercontent.com/goooooouwa/out/master/out/slice-$i.xml" 
 python3 src/news2kindle.py "blog title" $i
 done
 ```
+
+
+## Where can I get RSS feeds?
+
+You can use [blog_downloader](https://github.com/goooooouwa/blog_downloader) to generate RSS feeds from a website. See how it works [here](https://github.com/goooooouwa/blog_downloader/blob/master/README.md). 
