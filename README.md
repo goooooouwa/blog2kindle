@@ -25,12 +25,14 @@ You can use [blog_crawler](https://github.com/goooooouwa/blog_crawler) to crawl 
 For example, you can publish the RSS feed to a Github repo (like [this one](https://github.com/goooooouwa/rss-feeds/tree/master/codinghorror)):
 
 ```bash
-git add ./out/rss.xml
+git add ./out  # folder with RSS feeds slice-[0-9].xml
 git commit -m "publish blog feeds"
 git push origin master   # publish the RSS file somewhere online to get a public URL
 ```
 
 ### 3. Save public URLs of RSS feeds into `config` folder as `slice-[0-9].txt` for new2kindle to read
+
+Not to be confused of slice-[0-9].xml, which are actual files with RSS feeds. slice-[0-9].txt is equivalent to feeds.txt, output of blog_crawler's "render" command, like this [feeds.txt](https://github.com/goooooouwa/rss-feeds/tree/master/codinghorror).
 
 See examples of slice-[0-9].txt files [here](https://github.com/goooooouwa/rss2kindle/blob/master/config).
 
