@@ -32,7 +32,7 @@ git push origin master   # publish the RSS file somewhere online to get a public
 
 ### 3. Save public URLs of RSS feeds into `config` folder as `slice-[0-9].txt` for new2kindle to read
 
-Not to be confused of slice-[0-9].xml, which are actual files with RSS feeds. slice-[0-9].txt is equivalent to feeds.txt, output of blog_crawler's "render" command, like this [feeds.txt](https://github.com/goooooouwa/rss-feeds/tree/master/codinghorror).
+**Not to be confused of slice-[0-9].xml, which are actual files with RSS feeds**. slice-[0-9].txt is equivalent to feeds.txt, output of blog_crawler's "render" command, like this [feeds.txt](https://github.com/goooooouwa/rss-feeds/tree/master/codinghorror).
 
 See examples of slice-[0-9].txt files [here](https://github.com/goooooouwa/rss2kindle/blob/master/config).
 
