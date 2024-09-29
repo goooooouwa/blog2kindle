@@ -20,7 +20,13 @@ Examples:
 
 `export $(cat .env | xargs)`
 
-### 2. Save public URLs of RSS feeds into config/slice-0.txt
+### 2. Generate RSS feeds and publish as public URLs
+
+You can use [blog_downloader](https://github.com/goooooouwa/blog_downloader) to crawl any website and generate RSS feeds from them. See how it works [here](https://github.com/goooooouwa/blog_downloader/blob/master/README.md). 
+
+### 2. Save public URLs of RSS feeds into `config/slice-0.txt`
+
+Example of RSS feeds of slice-0.txt can be seen [here](https://github.com/goooooouwa/rss-feeds/tree/master/codinghorror).
 
 ### 3. Generate ebook from RSS feed and send it to Kindle
 
@@ -39,7 +45,3 @@ done
 ```
 
 Now you will have your favourite blog sent to your Kindle, waiting for you to pick up.
-
-## How do I get RSS feeds XML files for my favourite websites if it doesn't provide one?
-
-You can use [blog_downloader](https://github.com/goooooouwa/blog_downloader) to crawl any website and generate RSS feeds from them. See how it works [here](https://github.com/goooooouwa/blog_downloader/blob/master/README.md). 
