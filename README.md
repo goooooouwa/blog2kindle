@@ -2,7 +2,7 @@
 
 blog2kindle is a little Python script that can turn RSS feeds of your favourite websites (e.g. blogs, news articles) into ebooks which can be read on ebook readers, such as Kindle, Apple Books.
 
-It's based on code from [news2kindle](https://github.com/goooooouwa/news2kindle) which reads a list of RSS feeds, package them as a MOBI file, and then send it to your kindle via kindle mail address and Amazon's whispersync. 
+It's based on code from [news2kindle](https://github.com/goooooouwa/news2kindle) which reads a list of RSS feeds, package them as a MOBI file, and then send it to your kindle via kindle mail address and Amazon's whispersync.
 
 ## Demo: ebook for blog [Coding Horror](https://blog.codinghorror.com/)
 
@@ -18,7 +18,7 @@ It's based on code from [news2kindle](https://github.com/goooooouwa/news2kindle)
 
 ### 1. Generate RSS feeds and publish as public URLs
 
-You can use [blog_downloader](https://github.com/goooooouwa/blog_downloader) to crawl any website and generate RSS feeds from them. See how it works [here](https://github.com/goooooouwa/blog_downloader/blob/master/README.md). 
+You can use [blog_crawler](https://github.com/goooooouwa/blog_crawler) to crawl any website and generate RSS feeds from them. See how it works [here](https://github.com/goooooouwa/blog_crawler/blob/master/README.md).
 
 ### 2. Publish the generated RSS feeds online (as news2kindle reads content of RSS feeds from a list of URLs)
 
