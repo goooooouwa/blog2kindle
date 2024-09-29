@@ -1,6 +1,6 @@
 # Read your favourite blog on your Kindle
 
-blog2kindle is a little Python script that can turn RSS feeds of your favourite websites (e.g. blogs, news articles) into ebooks which can be read on ebook readers, such as Kindle, Apple Books.
+rss2kindle is a little Python script that can turn RSS feeds of your favourite websites (e.g. blogs, news articles) into ebooks which can be read on ebook readers, such as Kindle, Apple Books.
 
 It's based on code from [news2kindle](https://github.com/goooooouwa/news2kindle) which reads a list of RSS feeds, package them as a MOBI file, and then send it to your kindle via kindle mail address and Amazon's whispersync.
 
@@ -32,7 +32,7 @@ git push origin master   # publish the RSS file somewhere online to get a public
 
 ### 3. Save public URLs of RSS feeds into `config` folder as `slice-[0-9].txt` for new2kindle to read
 
-See examples of slice-[0-9].txt files [here](https://github.com/goooooouwa/blog2kindle/blob/master/config).
+See examples of slice-[0-9].txt files [here](https://github.com/goooooouwa/rss2kindle/blob/master/config).
 
 ## Run
 
