@@ -20,18 +20,18 @@ Examples:
 
 `export $(cat .env | xargs)`
 
-### 2. Save public URLs of RSS feeds into config/slice-[0-9].txt
+### 2. Save public URLs of RSS feeds into config/slice-0.txt
 
 ### 3. Generate ebook from RSS feed and send it to Kindle
 
 ```
-python3 ./src/news2kindle.py "blog title" 0 # which fetches the content of each RSS feeds linked in config/slice-[0-9].txt, package them as a MOBI file, and then send it to your kindle via kindle mail address and Amazon's whispersync.
+python3 ./src/news2kindle.py "blog title" 0 # which fetches the content of each RSS feeds linked in config/slice-0.txt, package them as a MOBI file, and then send it to your kindle via kindle mail address and Amazon's whispersync.
 ```
 
 To generate multiple books in batch, you can run:
 
 ```
-for i in {0..4}
+for i in {0..9}
 do
 echo "https://raw.githubusercontent.com/goooooouwa/out/master/out/slice-$i.xml" > config/slice-$i.txt
 python3 ./src/news2kindle.py "blog title" $i
@@ -40,6 +40,6 @@ done
 
 Now you will have your favourite blog sent to your Kindle, waiting for you to pick up.
 
-## How do I get RSS feeds for my favourite websites if it doesn't provide one?
+## How do I get RSS feeds XML files for my favourite websites if it doesn't provide one?
 
 You can use [blog_downloader](https://github.com/goooooouwa/blog_downloader) to crawl any website and generate RSS feeds from them. See how it works [here](https://github.com/goooooouwa/blog_downloader/blob/master/README.md). 
