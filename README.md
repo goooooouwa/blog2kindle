@@ -51,7 +51,7 @@ To generate multiple books in batch, you can run:
 ```
 for i in {0..9}
 do
-echo "https://raw.githubusercontent.com/goooooouwa/out/master/out/slice-$i.xml" > config/slice-$i.txt
+echo "https://raw.githubusercontent.com/goooooouwa/rss-feeds/master/out/slice-$i.xml" > config/slice-$i.txt
 python3 ./src/news2kindle.py "blog title" $i
 done
 ```

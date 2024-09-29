@@ -1,1 +1,1 @@
-https://raw.githubusercontent.com/goooooouwa/out/master/out/slice-4.xml
+https://raw.githubusercontent.com/goooooouwa/rss-feeds/master/out/slice-4.xml
