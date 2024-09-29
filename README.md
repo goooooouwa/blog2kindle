@@ -1,4 +1,4 @@
-# Read your favourite blog on your Kindle
+# Read your favourite blogs on your Kindle
 
 rss2kindle is a little Python script that can turn RSS feeds of your favourite websites (e.g. blogs, news articles) into ebooks which can be read on ebook readers, such as Kindle, Apple Books.
 
