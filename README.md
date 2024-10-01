@@ -10,11 +10,16 @@ It's based on code from [news2kindle](https://github.com/goooooouwa/news2kindle)
 
 ![Screen Shot 2021-11-25 at 6 48 48 PM](https://user-images.githubusercontent.com/1495607/143427976-0fa33f81-93e6-4271-8562-53cce35bd1e1.png)
 
+## Prerequsites:
+
+1. Python 3.8.20 (recommend install with [pyenv](https://github.com/pyenv/pyenv))
+2. ~~Calibre which provides 'ebook-convert' command (no longer necessary)~~
+
 ## Usage
 
 `python3 ./src/news2kindle.py [blog title] [slice number]`
 
-## Preparation
+## RSS feeds preparation
 
 ### 1. Generate RSS feeds and publish as public URLs
 
