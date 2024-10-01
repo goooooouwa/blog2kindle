@@ -158,10 +158,10 @@ def send_mail(send_from, send_to, subject, text, files):
     smtp.quit()
 
 
-def convert_to_mobi(input_file, output_file):
-    cmd = ['ebook-convert', input_file, output_file]
-    process = subprocess.Popen(cmd)
-    process.wait()
+# def convert_to_mobi(input_file, output_file):
+#     cmd = ['ebook-convert', input_file, output_file]  # ebook-convert is a command of the Calibre program
+#     process = subprocess.Popen(cmd)
+#     process.wait()
 
 
 def do_one_round():
@@ -186,7 +186,7 @@ def do_one_round():
         logging.info("Creating epub")
 
         epubFile = sys.argv[1] + '-' + sys.argv[2] + '.epub'
-        mobiFile = sys.argv[1] + '-' + sys.argv[2] + '.mobi'
+        # mobiFile = sys.argv[1] + '-' + sys.argv[2] + '.mobi'
 
         os.environ['PYPANDOC_PANDOC'] = PANDOC
         pypandoc.convert_text(result,
@@ -196,17 +196,17 @@ def do_one_round():
                               extra_args=["--standalone",
                                           f"--epub-cover-image={COVER_FILE}",
                                           ])
-        convert_to_mobi(epubFile, mobiFile)
+        # convert_to_mobi(epubFile, mobiFile)
 
         logging.info("Sending to kindle email")
         send_mail(send_from=EMAIL_FROM,
                   send_to=[KINDLE_EMAIL],
                   subject="Daily News",
                   text="This is your daily news.\n\n--\n\n",
-                  files=[mobiFile])
+                  files=[epubFile])
         logging.info("Cleaning up...")
-        os.remove(epubFile)
-        os.remove(mobiFile)
+        # os.remove(epubFile)
+        # os.remove(mobiFile)
 
     logging.info("Finished.")
     update_start(now)
