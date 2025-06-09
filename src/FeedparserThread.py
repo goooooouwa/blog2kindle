@@ -43,7 +43,7 @@ class FeedparserThread(threading.Thread):
             post = process_entry(entry, blog, self.START)
             if post:
                 self.myposts.append(post)
-        self.myposts.sort()
+        # self.myposts.sort()
         self.posts += self.myposts
 
 

@@ -173,7 +173,7 @@ def do_one_round():
     logging.info(f"Collecting posts since {start.astimezone(pytz.timezone(TIMEZONE))}")
 
     posts = get_posts_list(load_feeds(), start)
-    posts.sort()
+    # posts.sort()
 
     logging.info(f"Downloaded {len(posts)} posts")
 
