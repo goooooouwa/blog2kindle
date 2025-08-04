@@ -88,10 +88,10 @@ def get_posts_list(feed_list, START):
 
 
 def nicedate(dt):
-    return dt.astimezone(pytz.timezone(TIMEZONE)).strftime('%d %B %Y').strip('0')
+    return dt.astimezone(pytz.timezone(TIMEZONE)).strftime('%d %B %Y')
 
 def nicehour(dt):
-    return dt.astimezone(pytz.timezone(TIMEZONE)).strftime('%I:%M&thinsp;%p').strip('0').lower()
+    return dt.astimezone(pytz.timezone(TIMEZONE)).strftime('%I:%M&thinsp;%p').lower()
 
 
 def nicepost(post):
@@ -116,7 +116,7 @@ html_head = u"""<html>
   <meta name="apple-mobile-web-app-capable" content="yes" />
 <style>
 </style>
-<title>{blog} - {slice}</title>
+<title>{blog}</title>
 </head>
 <body>
 
@@ -130,7 +130,6 @@ html_tail = u"""
 html_perpost = u"""
     <article>
         <h1><a href="{link}">{title}</a></h1>
-        <p><small>By {author} for <i>{blog}</i>, on {nicedate} at {nicetime}.</small></p>
          {body}
     </article>
 """
@@ -186,7 +185,7 @@ def do_one_round():
 
         logging.info("Creating epub")
 
-        epubFile = os.path.join(OUTPUT_PATH, sys.argv[1] + '-' + sys.argv[2] + '.epub')
+        epubFile = os.path.join(OUTPUT_PATH, sys.argv[1] + '.epub')
         # mobiFile = sys.argv[1] + '-' + sys.argv[2] + '.mobi'
 
         os.environ['PYPANDOC_PANDOC'] = PANDOC
