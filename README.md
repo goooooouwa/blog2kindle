@@ -50,7 +50,7 @@ See examples of slice-[0-9].txt files [here](https://github.com/goooooouwa/blog2
 ### 5. Generate ebook from RSS feed and send it to Kindle
 
 ```
-python3 ./src/news2kindle.py "blog title" 0 # which fetches the content of each RSS feeds linked in config/slice-0.txt, package them as a MOBI file, and then send it to your kindle via kindle mail address and Amazon's whispersync.
+python3 ./src/news2kindle.py "blog title" 0 "author name" # which fetches the content of each RSS feeds linked in config/slice-0.txt, package them as a MOBI file, and then send it to your kindle via kindle mail address and Amazon's whispersync.
 ```
 
 To generate multiple books in batch, you can run:
@@ -59,7 +59,7 @@ To generate multiple books in batch, you can run:
 for i in {0..9}
 do
 echo "https://raw.githubusercontent.com/goooooouwa/rss-feeds/master/codinghorror/slice-$i.xml" > config/slice-$i.txt
-python3 ./src/news2kindle.py "blog title" $i
+python3 ./src/news2kindle.py "blog title" $i "author name"
 done
 ```
 
