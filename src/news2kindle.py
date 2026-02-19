@@ -116,7 +116,7 @@ html_head = u"""<html>
   <meta name="apple-mobile-web-app-capable" content="yes" />
 <style>
 </style>
-<title>{blog}</title>
+<title>{blog} - {slice}</title>
 </head>
 <body>
 
@@ -185,7 +185,7 @@ def do_one_round():
 
         logging.info("Creating epub")
 
-        epubFile = os.path.join(OUTPUT_PATH, sys.argv[1] + '.epub')
+        epubFile = os.path.join(OUTPUT_PATH, sys.argv[1] + '-' + sys.argv[2] + '.epub')
         # mobiFile = sys.argv[1] + '-' + sys.argv[2] + '.mobi'
 
         os.environ['PYPANDOC_PANDOC'] = PANDOC
