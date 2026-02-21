@@ -39,7 +39,7 @@ CONFIG_PATH = './config'
 OUTPUT_PATH = './output'
 COVER_FILE = os.path.join(CONFIG_PATH, 'cover.png')
 config_file = os.path.expanduser(os.path.join(CONFIG_PATH, 'config.json'))
-feeds_file = os.path.expanduser(os.path.join(CONFIG_PATH, sys.argv[1]))
+feeds_file = os.path.expanduser(sys.argv[1])
 
 with open(config_file, 'r') as f:
     config =  json.loads(f)
