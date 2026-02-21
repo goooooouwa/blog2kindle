@@ -18,6 +18,7 @@ import threading
 import subprocess
 from datetime import datetime, timedelta
 import os
+import json
 import locale
 from FeedparserThread import FeedparserThread
 
@@ -36,12 +37,12 @@ TIMEZONE = os.getenv("TIMEZONE", "UTC")
 
 CONFIG_PATH = './config'
 OUTPUT_PATH = './output'
-FEEDS_FILE = os.path.join(CONFIG_PATH, sys.argv[2])
 COVER_FILE = os.path.join(CONFIG_PATH, 'cover.png')
+config_file = os.path.expanduser(os.path.join(CONFIG_PATH, 'config.json'))
+feeds_file = os.path.expanduser(os.path.join(CONFIG_PATH, sys.argv[1]))
 
-
-feeds_file = os.path.expanduser(FEEDS_FILE)
-
+with open(config_file, 'r') as f:
+    config =  json.loads(f)
 
 def load_feeds():
     """Return a list of the feeds for download.
@@ -180,14 +181,14 @@ def do_one_round():
     if posts:
         logging.info("Compiling newspaper")
 
-        result = html_head.format(book=sys.argv[1], author=sys.argv[3]) + \
+        result = html_head.format(book=config['title'], author=config['author']) + \
             u"\n".join([html_perpost.format(**nicepost(post))
                         for post in posts]) + html_tail
 
         logging.info("Creating epub")
 
-        epubFile = os.path.join(OUTPUT_PATH, sys.argv[1] + '.epub')
-        # mobiFile = sys.argv[1] + '.mobi'
+        epubFile = os.path.join(OUTPUT_PATH, config['title'] + '.epub')
+        # mobiFile = config['title'] + '.mobi'
 
         os.environ['PYPANDOC_PANDOC'] = PANDOC
         pypandoc.convert_text(result,
