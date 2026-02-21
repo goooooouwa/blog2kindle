@@ -69,7 +69,7 @@ Please note, this `config.json` is compatible with the Blog Crawler config file,
 
 ### 5. Replace the `cover.png` file under `config` folder with a image for the book cover
 
-See an example of `cover.png` [here](https://github.com/goooooouwa/blog2kindle/blob/master/config/cover.png).
+See an example of `cover.png` [here](https://github.com/goooooouwa/blog2kindle/blob/master/config/example.cover.png).
 
 ## Environment setup
 
