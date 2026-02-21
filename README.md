@@ -65,7 +65,7 @@ Example `config.json` file:
 }
 ```
 
-Please note, this `config.json` is compatible with the Blog Crawler config file, so you can simply copy over if you have one. See an example of Blog Crawler config.json file [here](https://github.com/goooooouwa/blog_crawler?tab=readme-ov-file#1-create-custom-page-and-post-objects-along-with-configjson-for-the-website). 
+Please note, this `config.json` is compatible with the Blog Crawler config file, so you can simply copy it over and reuse if you already have one. See an example of Blog Crawler config.json file [here](https://github.com/goooooouwa/blog_crawler?tab=readme-ov-file#1-create-custom-page-and-post-objects-along-with-configjnnson-for-the-website). 
 
 ### 5. Replace the `cover.png` file under `config` folder with a image for the book cover
 
