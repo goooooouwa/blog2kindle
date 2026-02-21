@@ -4,7 +4,7 @@ blog2kindle is a little Python script that can turn RSS feeds of your favourite 
 
 It's based on code from [news2kindle](https://github.com/goooooouwa/news2kindle) which reads a list of RSS feeds, package them as a MOBI file, and then send it to your kindle via kindle mail address and Amazon's whispersync.
 
-## Demo: ePub version of blog [Coding Horror](https://blog.codinghorror.com/)
+## Demo: read blog [Coding Horror](https://blog.codinghorror.com/) as an ebook
 
 ![Screen Shot 2021-11-25 at 6 49 02 PM](https://user-images.githubusercontent.com/1495607/143427994-5eea1a37-2b73-4c71-9858-eed10ea09abd.png)
 
@@ -25,7 +25,7 @@ python -m pip install -r requirements.txt
 
 ## Usage
 
-`python ./src/news2kindle.py [feeds file]`
+`python ./src/news2kindle.py [feeds-file]`
 
 For example:
 
@@ -35,7 +35,7 @@ For example:
 
 ### 1. Generate RSS feeds and publish as public URLs
 
-You can use [blog_crawler](https://github.com/goooooouwa/blog_crawler) to crawl any website and generate RSS feeds from them. See how it works [here](https://github.com/goooooouwa/blog_crawler/blob/master/README.md).
+You can use [Blog Crawler](https://github.com/goooooouwa/blog_crawler) to crawl any website and generate RSS feeds from them. See how it works [here](https://github.com/goooooouwa/blog_crawler/blob/master/README.md).
 
 ### 2. Publish the generated RSS feeds online (as news2kindle requires a list of URLs to retrieve content from RSS feeds)
 
@@ -51,7 +51,9 @@ git push origin master   # publish the RSS files somewhere online
 
 See an example of `feeds.txt` file [here](https://github.com/goooooouwa/rss-feeds/blob/master/codinghorror/feeds.txt). 
 
-### 4. Create a `config.json` configuration file for the blog under `config` folder
+## Book configurations
+
+### 4. Create a `config.json` file for the blog configurations under `config` folder
 
 Example `config.json` file:
 
@@ -63,19 +65,25 @@ Example `config.json` file:
 }
 ```
 
-Please note, this `config.json` is compatible with the Blog Crowler config file, so you can simply copy over if you have one. See an example of Blog Crowler config.json file [here](https://github.com/goooooouwa/blog_crawler?tab=readme-ov-file#1-create-custom-page-and-post-objects-along-with-configjson-for-the-website). 
+Please note, this `config.json` is compatible with the Blog Crawler config file, so you can simply copy over if you have one. See an example of Blog Crawler config.json file [here](https://github.com/goooooouwa/blog_crawler?tab=readme-ov-file#1-create-custom-page-and-post-objects-along-with-configjson-for-the-website). 
 
-### 5. Replace the `cover.png` file with a image for the book cover under `config` folder
+### 5. Replace the `cover.png` file under `config` folder with a image for the book cover
 
 See an example of `cover.png` [here](https://github.com/goooooouwa/blog2kindle/blob/master/config/cover.png).
 
-## Run
+## Environment setup
 
-### 5. Setup environment variables from `.env` file
+### 6. Create a `.env` file
+
+Copy the `example.env` file to create  a `.env` file and set the environment variables.
+
+### 7. Setup environment variables from `.env` file
 
 `export $(cat .env | xargs)`
 
-### 6. Generate ebook from RSS feed and send it to Kindle
+## Run
+
+### 8. Generate ebook from RSS feed and send it to Kindle
 
 ```
 python ./src/news2kindle.py config/feeds.txt # which fetches the content of each RSS feeds linked in config/feeds.txt, package them as a MOBI file, and then send it to your kindle via kindle mail address and Amazon's whispersync.
