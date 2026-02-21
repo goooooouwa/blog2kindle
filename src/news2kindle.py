@@ -42,7 +42,7 @@ config_file = os.path.expanduser(os.path.join(CONFIG_PATH, 'config.json'))
 feeds_file = os.path.expanduser(sys.argv[1])
 
 with open(config_file, 'r') as f:
-    config =  json.loads(f)
+    config = json.load(f)
 
 def load_feeds():
     """Return a list of the feeds for download.
