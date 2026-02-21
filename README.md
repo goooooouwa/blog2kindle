@@ -32,14 +32,12 @@ For example, you can publish the RSS feed to a Github repo (like [this one](http
 ```bash
 git add ./out  # folder with RSS feeds rss-[0-9].xml
 git commit -m "publish blog feeds"
-git push origin master   # publish the RSS files somewhere online & store their URLs in a feeds.txt file
+git push origin master   # publish the RSS files somewhere online
 ```
 
-### 3. Save public URLs of RSS feeds into `config` folder as `feeds-[0-9].txt` for new2kindle to read
+### 3. Save public URLs of RSS feeds in a `feeds.txt` under `config` folder for new2kindle to read
 
-**Not to be confused of rss-[0-9].xml, which are actual files with RSS feeds content, where as feeds-[0-9].txt consists of only URLS to rss-[0-9].xml files**. feeds-[0-9].txt is equivalent to feeds.txt, output of blog_crawler's "render" command, like this [feeds.txt](https://github.com/goooooouwa/rss-feeds/tree/master/codinghorror).
-
-See examples of feeds-[0-9].txt files [here](https://github.com/goooooouwa/blog2kindle/blob/master/config).
+See examples of feeds.txt file [here](https://github.com/goooooouwa/rss-feeds/blob/master/codinghorror/feeds.txt). 
 
 ## Run
 
@@ -50,7 +48,7 @@ See examples of feeds-[0-9].txt files [here](https://github.com/goooooouwa/blog2
 ### 5. Generate ebook from RSS feed and send it to Kindle
 
 ```
-python3 ./src/news2kindle.py "blog title" 0 "author name" # which fetches the content of each RSS feeds linked in config/feeds-0.txt, package them as a MOBI file, and then send it to your kindle via kindle mail address and Amazon's whispersync.
+python3 ./src/news2kindle.py "blog title" feeds.txt "author name" # which fetches the content of each RSS feeds linked in config/feeds.txt, package them as a MOBI file, and then send it to your kindle via kindle mail address and Amazon's whispersync.
 ```
 
 To generate multiple books in batch, you can run:
@@ -59,7 +57,7 @@ To generate multiple books in batch, you can run:
 for i in {0..9}
 do
 echo "https://raw.githubusercontent.com/goooooouwa/rss-feeds/master/codinghorror/rss-$i.xml" > config/feeds-$i.txt
-python3 ./src/news2kindle.py "blog title" $i "author name"
+python3 ./src/news2kindle.py "blog title" feeds-$i.txt "author name"
 done
 ```
 
