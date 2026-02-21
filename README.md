@@ -17,7 +17,7 @@ It's based on code from [news2kindle](https://github.com/goooooouwa/news2kindle)
 
 ## Usage
 
-`python3 ./src/news2kindle.py [blog title] [slice number]`
+`python3 ./src/news2kindle.py [blog title] [feed number]`
 
 ## RSS feeds preparation
 

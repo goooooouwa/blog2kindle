@@ -116,7 +116,7 @@ html_head = u"""<html>
   <meta name="apple-mobile-web-app-capable" content="yes" />
 <style>
 </style>
-<title>{blog} - {slice}</title>
+<title>{blog} - {feed_number}</title>
 </head>
 <body>
 
@@ -180,7 +180,7 @@ def do_one_round():
     if posts:
         logging.info("Compiling newspaper")
 
-        result = html_head.format(blog=sys.argv[1], slice=sys.argv[2], author=sys.argv[3]) + \
+        result = html_head.format(blog=sys.argv[1], feed_number=sys.argv[2], author=sys.argv[3]) + \
             u"\n".join([html_perpost.format(**nicepost(post))
                         for post in posts]) + html_tail
 
