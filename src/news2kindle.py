@@ -117,7 +117,7 @@ html_head = u"""<html>
   <meta name="apple-mobile-web-app-capable" content="yes" />
 <style>
 </style>
-<title>{book}</title>
+<title>{blog}</title>
 </head>
 <body>
 
@@ -131,7 +131,7 @@ html_tail = u"""
 html_perpost = u"""
     <article>
         <h1><a href="{link}">{title}</a></h1>
-        <p><small>By {author} for <i>{book}</i>, on {nicedate} at {nicetime}.</small></p>
+        <p><small>By {author} for <i>{blog}</i>, on {nicedate} at {nicetime}.</small></p>
          {body}
     </article>
 """
@@ -181,7 +181,7 @@ def do_one_round():
     if posts:
         logging.info("Compiling newspaper")
 
-        result = html_head.format(book=config['title'], author=config['author']) + \
+        result = html_head.format(blog=config['title'], author=config['author']) + \
             u"\n".join([html_perpost.format(**nicepost(post))
                         for post in posts]) + html_tail
 
