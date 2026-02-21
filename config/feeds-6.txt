@@ -1,1 +1,0 @@
-https://raw.githubusercontent.com/goooooouwa/rss-feeds/master/codinghorror/rss-6.xml

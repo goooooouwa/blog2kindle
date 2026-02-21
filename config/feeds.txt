@@ -1,0 +1,10 @@
+https://raw.githubusercontent.com/goooooouwa/rss-feeds/master/codinghorror/rss-0.xml
+https://raw.githubusercontent.com/goooooouwa/rss-feeds/master/codinghorror/rss-1.xml
+https://raw.githubusercontent.com/goooooouwa/rss-feeds/master/codinghorror/rss-2.xml
+https://raw.githubusercontent.com/goooooouwa/rss-feeds/master/codinghorror/rss-3.xml
+https://raw.githubusercontent.com/goooooouwa/rss-feeds/master/codinghorror/rss-4.xml
+https://raw.githubusercontent.com/goooooouwa/rss-feeds/master/codinghorror/rss-5.xml
+https://raw.githubusercontent.com/goooooouwa/rss-feeds/master/codinghorror/rss-6.xml
+https://raw.githubusercontent.com/goooooouwa/rss-feeds/master/codinghorror/rss-7.xml
+https://raw.githubusercontent.com/goooooouwa/rss-feeds/master/codinghorror/rss-8.xml
+https://raw.githubusercontent.com/goooooouwa/rss-feeds/master/codinghorror/rss-9.xml
