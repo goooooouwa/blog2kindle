@@ -17,7 +17,11 @@ It's based on code from [news2kindle](https://github.com/goooooouwa/news2kindle)
 
 ## Usage
 
-`python3 ./src/news2kindle.py [blog title] [feeds file] [blog author]`
+`python3 ./src/news2kindle.py [feeds file]`
+
+For example:
+
+`python3 ./src/news2kindle.py config/feeds.txt`
 
 ## RSS feeds preparation
 
@@ -48,7 +52,7 @@ See examples of feeds.txt file [here](https://github.com/goooooouwa/rss-feeds/bl
 ### 5. Generate ebook from RSS feed and send it to Kindle
 
 ```
-python3 ./src/news2kindle.py "blog title" feeds.txt "author name" # which fetches the content of each RSS feeds linked in config/feeds.txt, package them as a MOBI file, and then send it to your kindle via kindle mail address and Amazon's whispersync.
+python3 ./src/news2kindle.py config/feeds.txt # which fetches the content of each RSS feeds linked in config/feeds.txt, package them as a MOBI file, and then send it to your kindle via kindle mail address and Amazon's whispersync.
 ```
 
 To generate multiple books in batch, you can run:
@@ -57,7 +61,7 @@ To generate multiple books in batch, you can run:
 for i in {0..9}
 do
 echo "https://raw.githubusercontent.com/goooooouwa/rss-feeds/master/codinghorror/rss-$i.xml" > config/feeds-$i.txt
-python3 ./src/news2kindle.py "blog title" feeds-$i.txt "author name"
+python3 ./src/news2kindle.py config/feeds-$i.txt
 done
 ```
 
