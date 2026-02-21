@@ -1,1 +1,0 @@
-https://raw.githubusercontent.com/goooooouwa/rss-feeds/master/codinghorror/slice-2.xml
