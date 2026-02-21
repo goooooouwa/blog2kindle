@@ -5,3 +5,4 @@ __pycache__
 *.log
 dailynews.mobi
 dailynews.epub
+venv
