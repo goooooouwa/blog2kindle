@@ -25,7 +25,7 @@ It's based on code from [news2kindle](https://github.com/goooooouwa/news2kindle)
 
 You can use [blog_crawler](https://github.com/goooooouwa/blog_crawler) to crawl any website and generate RSS feeds from them. See how it works [here](https://github.com/goooooouwa/blog_crawler/blob/master/README.md).
 
-### 2. Publish the generated RSS feeds online (as news2kindle reads content of RSS feeds from a list of URLs)
+### 2. Publish the generated RSS feeds online (as blog2kindle reads content of RSS feeds from a list of URLs)
 
 For example, you can publish the RSS feed to a Github repo (like [this one](https://github.com/goooooouwa/rss-feeds/tree/master/codinghorror)):
 
