@@ -25,11 +25,11 @@ python -m pip install -r requirements.txt
 
 ## Usage
 
-`python3 ./src/news2kindle.py [feeds file]`
+`python ./src/news2kindle.py [feeds file]`
 
 For example:
 
-`python3 ./src/news2kindle.py config/feeds.txt`
+`python ./src/news2kindle.py config/feeds.txt`
 
 ## RSS feeds preparation
 
@@ -78,7 +78,7 @@ See an example of `cover.png` [here](https://github.com/goooooouwa/blog2kindle/b
 ### 6. Generate ebook from RSS feed and send it to Kindle
 
 ```
-python3 ./src/news2kindle.py config/feeds.txt # which fetches the content of each RSS feeds linked in config/feeds.txt, package them as a MOBI file, and then send it to your kindle via kindle mail address and Amazon's whispersync.
+python ./src/news2kindle.py config/feeds.txt # which fetches the content of each RSS feeds linked in config/feeds.txt, package them as a MOBI file, and then send it to your kindle via kindle mail address and Amazon's whispersync.
 ```
 
 To generate multiple books in batch, you can run:
@@ -87,7 +87,7 @@ To generate multiple books in batch, you can run:
 for i in {0..9}
 do
 echo "https://raw.githubusercontent.com/goooooouwa/rss-feeds/master/codinghorror/rss-$i.xml" > config/feeds-$i.txt
-python3 ./src/news2kindle.py config/feeds-$i.txt
+python ./src/news2kindle.py config/feeds-$i.txt
 done
 ```
 
