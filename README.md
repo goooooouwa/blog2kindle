@@ -15,6 +15,14 @@ It's based on code from [news2kindle](https://github.com/goooooouwa/news2kindle)
 1. Python 3.8.20 (recommend install with [pyenv](https://github.com/pyenv/pyenv))
 2. ~~Calibre which provides 'ebook-convert' command (no longer necessary as Amazon now accpets sending ePub instead of Mobi files)~~
 
+## Setup
+
+```bash
+python -m venv path-to-venv
+source path-to-venv/bin/activate
+python -m pip install -r requirements.txt
+```
+
 ## Usage
 
 `python3 ./src/news2kindle.py [feeds file]`
@@ -41,15 +49,33 @@ git push origin master   # publish the RSS files somewhere online
 
 ### 3. Save public URLs of RSS feeds into a `feeds.txt` under `config` folder for new2kindle to process
 
-See examples of feeds.txt file [here](https://github.com/goooooouwa/rss-feeds/blob/master/codinghorror/feeds.txt). 
+See an example of `feeds.txt` file [here](https://github.com/goooooouwa/rss-feeds/blob/master/codinghorror/feeds.txt). 
+
+### 4. Create a `config.json` configuration file for the blog under `config` folder
+
+Example `config.json` file:
+
+```json
+// config/config.json
+{
+  "title": "Coding Horror",
+  "author": "Jeff Atwood"
+}
+```
+
+Please note, this `config.json` is compatible with the Blog Crowler config file, so you can simply copy over if you have one. See an example of Blog Crowler config.json file [here](https://github.com/goooooouwa/blog_crawler?tab=readme-ov-file#1-create-custom-page-and-post-objects-along-with-configjson-for-the-website). 
+
+### 5. Replace the `cover.png` file with a image for the book cover under `config` folder
+
+See an example of `cover.png` [here](https://github.com/goooooouwa/blog2kindle/blob/master/config/cover.png).
 
 ## Run
 
-### 4. Setup environment variables from `.env` file
+### 5. Setup environment variables from `.env` file
 
 `export $(cat .env | xargs)`
 
-### 5. Generate ebook from RSS feed and send it to Kindle
+### 6. Generate ebook from RSS feed and send it to Kindle
 
 ```
 python3 ./src/news2kindle.py config/feeds.txt # which fetches the content of each RSS feeds linked in config/feeds.txt, package them as a MOBI file, and then send it to your kindle via kindle mail address and Amazon's whispersync.
