@@ -36,7 +36,7 @@ TIMEZONE = os.getenv("TIMEZONE", "UTC")
 
 CONFIG_PATH = './config'
 OUTPUT_PATH = './output'
-FEEDS_FILE = os.path.join(CONFIG_PATH, 'feeds-' + sys.argv[2] + '.txt')
+FEEDS_FILE = os.path.join(CONFIG_PATH, sys.argv[2])
 COVER_FILE = os.path.join(CONFIG_PATH, 'cover.png')
 
 
@@ -116,7 +116,7 @@ html_head = u"""<html>
   <meta name="apple-mobile-web-app-capable" content="yes" />
 <style>
 </style>
-<title>{blog} - {feed_number}</title>
+<title>{book}</title>
 </head>
 <body>
 
@@ -130,7 +130,7 @@ html_tail = u"""
 html_perpost = u"""
     <article>
         <h1><a href="{link}">{title}</a></h1>
-        <p><small>By {author} for <i>{blog}</i>, on {nicedate} at {nicetime}.</small></p>
+        <p><small>By {author} for <i>{book}</i>, on {nicedate} at {nicetime}.</small></p>
          {body}
     </article>
 """
@@ -180,14 +180,14 @@ def do_one_round():
     if posts:
         logging.info("Compiling newspaper")
 
-        result = html_head.format(blog=sys.argv[1], feed_number=sys.argv[2], author=sys.argv[3]) + \
+        result = html_head.format(book=sys.argv[1], author=sys.argv[3]) + \
             u"\n".join([html_perpost.format(**nicepost(post))
                         for post in posts]) + html_tail
 
         logging.info("Creating epub")
 
-        epubFile = os.path.join(OUTPUT_PATH, sys.argv[1] + '-' + sys.argv[2] + '.epub')
-        # mobiFile = sys.argv[1] + '-' + sys.argv[2] + '.mobi'
+        epubFile = os.path.join(OUTPUT_PATH, sys.argv[1] + '.epub')
+        # mobiFile = sys.argv[1] + '.mobi'
 
         os.environ['PYPANDOC_PANDOC'] = PANDOC
         pypandoc.convert_text(result,
