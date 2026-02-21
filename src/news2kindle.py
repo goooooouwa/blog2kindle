@@ -36,7 +36,7 @@ TIMEZONE = os.getenv("TIMEZONE", "UTC")
 
 CONFIG_PATH = './config'
 OUTPUT_PATH = './output'
-FEEDS_FILE = os.path.join(CONFIG_PATH, 'slice-' + sys.argv[2] + '.txt')
+FEEDS_FILE = os.path.join(CONFIG_PATH, 'feeds-' + sys.argv[2] + '.txt')
 COVER_FILE = os.path.join(CONFIG_PATH, 'cover.png')
 
 
