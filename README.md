@@ -32,7 +32,7 @@ For example, you can publish the RSS feed to a Github repo (like [this one](http
 ```bash
 git add ./out  # folder with RSS feeds rss-[0-9].xml
 git commit -m "publish blog feeds"
-git push origin master   # publish the RSS file somewhere online to get a public URL
+git push origin master   # publish the RSS files somewhere online & store their URLs in a feeds.txt file
 ```
 
 ### 3. Save public URLs of RSS feeds into `config` folder as `feeds-[0-9].txt` for new2kindle to read
