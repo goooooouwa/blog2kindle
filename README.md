@@ -4,7 +4,7 @@ blog2kindle is a little Python script that can turn RSS feeds of your favourite 
 
 It's based on code from [news2kindle](https://github.com/goooooouwa/news2kindle) which reads a list of RSS feeds, package them as a MOBI file, and then send it to your kindle via kindle mail address and Amazon's whispersync.
 
-## Demo: ebook for blog [Coding Horror](https://blog.codinghorror.com/)
+## Demo: ePub version of blog [Coding Horror](https://blog.codinghorror.com/)
 
 ![Screen Shot 2021-11-25 at 6 49 02 PM](https://user-images.githubusercontent.com/1495607/143427994-5eea1a37-2b73-4c71-9858-eed10ea09abd.png)
 
