@@ -36,18 +36,18 @@ TIMEZONE = os.getenv("TIMEZONE", "UTC")
 
 CONFIG_PATH = './config'
 OUTPUT_PATH = './output'
-FEED_FILE = os.path.join(CONFIG_PATH, 'slice-' + sys.argv[2] + '.txt')
+FEEDS_FILE = os.path.join(CONFIG_PATH, 'slice-' + sys.argv[2] + '.txt')
 COVER_FILE = os.path.join(CONFIG_PATH, 'cover.png')
 
 
-feed_file = os.path.expanduser(FEED_FILE)
+feeds_file = os.path.expanduser(FEEDS_FILE)
 
 
 def load_feeds():
     """Return a list of the feeds for download.
-        At the moment, it reads it from `feed_file`.
+        At the moment, it reads it from `feeds_file`.
     """
-    with open(feed_file, 'r') as f:
+    with open(feeds_file, 'r') as f:
         return list(f)
 
 
@@ -57,8 +57,8 @@ def update_start(now):
     as the starting point to download articles.
     """
     new_now = time.mktime(now.timetuple())
-    with open(feed_file, 'a'):
-        os.utime(feed_file, (new_now, new_now))
+    with open(feeds_file, 'a'):
+        os.utime(feeds_file, (new_now, new_now))
 
 
 def get_start(fname):
@@ -168,7 +168,7 @@ def send_mail(send_from, send_to, subject, text, files):
 def do_one_round():
     # get all posts from starting point to now
     now = pytz.utc.localize(datetime.now())
-    start = get_start(feed_file)
+    start = get_start(feeds_file)
 
     logging.info(f"Collecting posts since {start.astimezone(pytz.timezone(TIMEZONE))}")
 
