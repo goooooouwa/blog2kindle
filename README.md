@@ -51,7 +51,7 @@ git push origin master   # publish the RSS files somewhere online
 
 See an example of `feeds.txt` file [here](https://github.com/goooooouwa/rss-feeds/blob/master/codinghorror/feeds.txt).
 
-## Book configurations
+## Ebook configurations
 
 ### 4. Create a `config.json` file for the blog configurations under `config` folder
 
@@ -67,7 +67,7 @@ Example `config.json` file:
 
 Please note, this `config.json` is compatible with the Blog Crawler config file, so you can simply copy it over and reuse if you already have one. See an example of Blog Crawler config.json file [here](https://github.com/goooooouwa/blog-crawler/blob/master/README.md#1-create-custom-page-and-post-objects-along-with-configjson-for-the-website).
 
-### 5. Replace the `cover.png` file under `config` folder with a image for the book cover
+### 5. Add a `cover.png` image as the book cover under `config` folder 
 
 See an example of `cover.png` [here](https://github.com/goooooouwa/Blog2kindle/blob/master/config/example.cover.png).
 
