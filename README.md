@@ -35,7 +35,7 @@ For example:
 
 ### 1. Generate RSS feeds and publish as public URLs
 
-You can use [Blog Crawler](https://github.com/goooooouwa/blog_crawler) to crawl any website and generate RSS feeds from them. See how it works [here](https://github.com/goooooouwa/blog_crawler/blob/master/README.md).
+You can use [Blog Crawler](https://github.com/goooooouwa/blog-crawler) to crawl any website and generate RSS feeds from them. See how it works [here](https://github.com/goooooouwa/blog-crawler/blob/master/README.md).
 
 ### 2. Publish the generated RSS feeds online (as news2kindle requires a list of URLs to retrieve content from RSS feeds)
 
@@ -49,7 +49,7 @@ git push origin master   # publish the RSS files somewhere online
 
 ### 3. Save public URLs of RSS feeds into a `feeds.txt` under `config` folder for new2kindle to process
 
-See an example of `feeds.txt` file [here](https://github.com/goooooouwa/rss-feeds/blob/master/codinghorror/feeds.txt). 
+See an example of `feeds.txt` file [here](https://github.com/goooooouwa/rss-feeds/blob/master/codinghorror/feeds.txt).
 
 ## Book configurations
 
@@ -65,7 +65,7 @@ Example `config.json` file:
 }
 ```
 
-Please note, this `config.json` is compatible with the Blog Crawler config file, so you can simply copy it over and reuse if you already have one. See an example of Blog Crawler config.json file [here](https://github.com/goooooouwa/blog_crawler/blob/master/README.md#1-create-custom-page-and-post-objects-along-with-configjson-for-the-website). 
+Please note, this `config.json` is compatible with the Blog Crawler config file, so you can simply copy it over and reuse if you already have one. See an example of Blog Crawler config.json file [here](https://github.com/goooooouwa/blog-crawler/blob/master/README.md#1-create-custom-page-and-post-objects-along-with-configjson-for-the-website).
 
 ### 5. Replace the `cover.png` file under `config` folder with a image for the book cover
 
@@ -75,7 +75,7 @@ See an example of `cover.png` [here](https://github.com/goooooouwa/blog2kindle/b
 
 ### 6. Create a `.env` file
 
-Copy the `example.env` file to create  a `.env` file and set the environment variables.
+Copy the `example.env` file to create a `.env` file and set the environment variables.
 
 ### 7. Setup environment variables from `.env` file
 
