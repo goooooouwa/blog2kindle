@@ -76,7 +76,7 @@ See an example of `cover.png` [here](https://github.com/goooooouwa/Blog2kindle/b
 
 ### 6. Create a `.env` file
 
-Copy the `example.env` file to create a `.env` file and set the environment variables.
+Copy the `example.env` file to create a `.env` file and set the environment variables with your own settings (including your email SMTP configurations).
 
 ### 7. Setup environment variables from `.env` file
 
