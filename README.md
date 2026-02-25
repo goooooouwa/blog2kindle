@@ -14,6 +14,7 @@ It's based on code from [news2kindle](https://github.com/goooooouwa/news2kindle)
 
 1. Python 3.8.20 (recommend install with [pyenv](https://github.com/pyenv/pyenv))
 2. ~~Calibre which provides 'ebook-convert' command (no longer necessary as Amazon now accpets sending ePub instead of Mobi files)~~
+3. An email SMTP account (to send ebooks to kindle)
 
 ## Setup
 
