@@ -101,3 +101,27 @@ done
 ```
 
 Now you will have your favourite blog sent to your Kindle, waiting for you to pick up.
+
+## Paid service
+
+If all the above steps looks daunting to you or you want to save some time, there is a paid service available as well.
+
+### Pricing
+
+$10 per ePub file containing all blog posts from 1 blog site
+
+### Terms of service:
+
+1. This service charges a $10 one time payment for 1 copy of an ePub file, which includes all the publicly accessible blog posts from the designated blog site
+1. This service doesn't include sending the ebook to your Kindle or other ebook libraries, you can do it yourself with Amazon's [Send to Kindle](https://www.amazon.com/sendtokindle) service.
+1. This one time payment does NOT include any future updates to the ebook generated.
+2. The designated blog site and it's blog posts need to be publicly accessible for at least 30 days after the payment in order for the request to fulfilled.
+1. The payment can be fully refunded via the original payment method if the ePub file was not be generated 30 days after the payment.
+
+### How it works
+
+1. Create an issue with a URL to the blog that you want to turn into an ebook;
+2. Send an email with your GitHub ID and a link to the GitHub issue to the service provider;
+3. Pay $10 to the service provider;
+4. The service provider will send you 1 copy of an ePub file via email within 30 days, containing all publicly accessible blog posts from the designated blog site.
+
